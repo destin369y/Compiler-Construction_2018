@@ -1,0 +1,18 @@
+qsort
+
+This simple code implements a non-recursive quicksort.
+It prints out the sorted list.  (Hence, you don't want 
+to run this on a 10,000 number file.) 
+
+This version does not correctly handle a file that contains
+duplicate entries.
+ 
+  qsort.i  -- the code
+  qsort1.d -- an input file with 20 numbers in worst case order
+  qsortl2.d -- an input file with 40 numbers in an average kind of order
+
+To run the code, locate the simulator.  If its path is 'xyz' then 
+
+   xyz qsort.i -d qsort1.d
+
+will run the quicksort on input file qsort1.d

@@ -1,0 +1,116 @@
+procedure qsort {
+
+  int PARAMS[0:3];
+  int DATA[0:10000];
+  int STACK[0:10000];
+  int i, bound, size;
+  int small, large, low, high;
+  int pivot, flag, temp;
+  int top, count, neg;
+
+  bound = PARAMS[0];
+
+
+  // initialize the STACK, which holds (lower,upper) pairs 
+  neg      = 0 - 999;
+  STACK[0] = neg;
+  STACK[1] = neg;
+  STACK[2] = 0;
+  STACK[3] = bound;
+  top = 4;
+
+  // the actual quicksort
+  count = 0;  
+
+  while( top > 3 ) {
+    low  = STACK[top - 2];
+    high = STACK[top - 1];
+    top  = top - 2;
+    count = count+1;
+
+    if (count > 1000)
+       then top = neg;
+
+    small = low;
+    large = high;
+
+    if (large - small == 1) then {  // degenerate interval, sort it 
+       if (DATA[small] > DATA[large]) then {
+          temp = DATA[small];
+          DATA[small] = DATA[large];
+          DATA[large] = temp;	    
+       }
+    }  // end of degenerate interval 
+
+    else {
+       pivot = (DATA[low] + DATA[high] + DATA[(low+high)/2]) / 3;
+
+       flag = 1;
+       while(flag) {
+         while(DATA[small] < pivot) {
+           small = small + 1;
+         }   
+	   
+         while(DATA[large] >= pivot) {
+	   large = large - 1;
+	 }
+	   
+	 if (small < large) then { // swap
+	    temp = DATA[small];
+	    DATA[small] = DATA[large];
+	    DATA[large] = temp;
+	 }
+	 else
+	   flag = 0;
+       }   // end of while(flag) loop
+
+       // push the new intervals 
+       size = small - low;
+       if (size > 1) then { // push "< pivot" interval
+          STACK[top]   = low;
+          STACK[top+1] = small - 1;
+          top = top + 2;
+       }
+       else { // if we get here then the "< pivot" partition is empty
+              // so, add 1 to pivot and repartition; throw away the 
+              // new "< pivot + 1" partition. (pivot is smallest elt)
+           pivot = pivot + 1;
+	   small = low;
+           large = high;
+
+           flag = 1;
+           while(flag) {
+             while(DATA[small] < pivot and small < large) {
+               small = small + 1;
+             }   
+	   
+             while(DATA[large] >= pivot and large > small) {
+	       large = large - 1;
+             }
+  	   
+             if (small < large) then { // swap
+	        temp = DATA[small];
+	        DATA[small] = DATA[large];
+                DATA[large] = temp;
+             }
+	     else
+	       flag = 0;
+           }   // end of while(flag) loop
+
+       }
+
+
+       if (high - large > 1) then {
+         STACK[top]   = large;
+         STACK[top+1] = high;
+         top          = top + 2;
+       }
+    }  // else not degenerate
+  }    // end while (top > 1)
+
+  for i = 0 to bound by 1 {
+       write DATA[i];
+  }
+}
+
+

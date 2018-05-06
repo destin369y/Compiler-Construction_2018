@@ -1,0 +1,20 @@
+sumred
+
+This benchmark implements a small sumreduction
+to create opportunities for loop unrolling.
+
+It takes as input a file that contains a dimension k, followed
+by the values for (k x k) array. It reads all of those values.
+Next, it computes the sum of those values and writes out that 
+result.
+
+To check correctness, the file sumred1.d shoud produce the answer 5050.
+
+To run it on the file sumred1.d, if xyz is the path to the ILOC 
+simulator, you would type
+
+   xyz  sumred.i -d sumred1.d
+
+The code should print out a single number (5050 for this file).
+
+

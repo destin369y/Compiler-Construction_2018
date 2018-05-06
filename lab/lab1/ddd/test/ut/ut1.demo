@@ -1,0 +1,7 @@
+procedure main {
+  int a;
+  int b[1:10,1:20];
+  a = 1;
+  b[a+2,2] = a + 1;
+}
+

@@ -1,0 +1,32 @@
+// COMP 512, Fall 2015
+// Benchmark:  Bubblesort
+procedure bsort {
+  int PARAMS[0:3];
+  int DATA[0:10000];
+  int i, upper, flag, temp, outoforder;
+
+  upper = PARAMS[0]; // location 4 is # elements to sort
+
+  flag = 1;
+  while( flag == 1) {
+    flag = 0;
+    for i = 0 to upper - 2  by 1 {
+      if (DATA[i] > DATA[i+1]) then {
+         flag = 1;
+	 temp = DATA[i];
+         DATA[i] = DATA[i+1];
+	 DATA[i+1] = temp;
+      }
+    } 
+  }
+  temp = 0;
+  outoforder = 0;
+  for i = 0 to upper - 2 by 1 {
+     if (DATA[i] > DATA[i+1]) then {
+     	outoforder = 1;
+	temp = i;
+     }
+  }
+  write outoforder;
+  write temp;
+}

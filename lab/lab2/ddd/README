@@ -1,0 +1,37 @@
+#An Optimizer for ILOC
+#COMP 506, Programming Assignment 2
+#Chengyin Liu, cl93
+
+------
+opt.cpp
+	The optimizer. It will:
+		Scan and parse the ILOC code
+		Build an internal representation for the ILOC code
+    	Perform two optimizations
+		Print the transformed ILOC code in a form that can be read and executed by the ILOC simulator
+
+opt
+	The executable optimizer built by our program
+
+sim
+	The ILOC simulator
+
+*.i
+	ILOC source files for testing
+
+*.d 
+	The input data files for ILOC program
+
+------
+Build:
+make
+	Use a Makefile to build the optimizer.
+
+Execute:
+./opt flags filename
+	The flags here can be '-v', '-u', '-v -u', or '-u -v',
+	where -v means value numbering, and -u means loop unrolling.
+	This will generate an optimized ILOC file with name ['opt' + flags + '_' + filename].
+
+./sim filename
+	Read the file and execute the code.

@@ -1,0 +1,10 @@
+procedure main {
+  int a, i;
+
+  a = 1;
+  for i = 1 to 10 by 1 { 
+    a = a + 1;
+  }
+  write a;
+
+}

@@ -1,0 +1,10 @@
+  output 0
+  output 4
+  output 8
+  output 12
+  output 16
+  output 20
+  output 24
+  output 28
+  output 32
+  output 36

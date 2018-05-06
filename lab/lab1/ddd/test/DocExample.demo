@@ -1,0 +1,35 @@
+// Example program in DEMO 
+// A simple bubblesort
+procedure bsort {
+   int DATA[0:10000];
+   int i, upper, flag, temp;
+   read upper; // # elements to sort
+   if (upper > 10000) then { 
+      upper = 0;  // a primitive quit
+      write 's';
+      write 'o';
+      write 'r';
+      write 't';
+      write 'e';
+      write 'n';
+      write '\n';
+   }
+   for i = 0 to upper - 1  by 1 {
+      read DATA[i];
+    }     
+   flag = 1;
+   while( flag == 1) {
+      flag = 0;
+      for i = 0 to upper - 2  by 1 {
+         if (DATA[i] > DATA[i+1]) then {
+            flag = 1;
+            temp = DATA[i];
+            DATA[i] = DATA[i+1];
+            DATA[i+1] = temp;
+         }
+      }
+   }
+   for i = 0 to upper - 1 by 1 {
+      write DATA[i];
+   }
+}

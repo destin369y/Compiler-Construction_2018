@@ -1,0 +1,10 @@
+procedure main {
+  int a, b, c, d;
+
+  a = 2;
+  b = 4;
+  c = a + b;
+  d = a * b;
+  write c;
+  write d;
+}

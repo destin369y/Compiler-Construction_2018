@@ -1,0 +1,39 @@
+//test merge two sorted lists
+
+
+procedure mergeTwoLists {
+    int a[0 : 10];
+    int b[0 : 10];
+    int c[0 : 20];
+    int i;
+    int j;
+    int k;
+    i = 0;
+    j = 0;
+    k = 0;
+
+    while (i <= 9 and j <= 9) {
+        if (a[i] <= b[j]) then {
+                c[k] = a[i];
+                i = i + 1;
+        } else {
+            c[k] = b[j];
+            j = j + 1;
+        }
+        k = k + 1;
+    }
+
+    if (i < 9) then {
+        for x = i to 9 by 1 {
+            c[k] = a[x];
+        }
+    }
+
+    if (j < 9) then {
+        for y = j to 9 by 1 {
+            c[k] = b[y];
+        }
+    }
+
+    write c;
+}

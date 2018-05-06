@@ -1,0 +1,12 @@
+procedure main {
+  int a;
+  int b[10:20,30:40];
+  char c;
+  a = 1;
+  for b = 1 to 10 by 1 {
+      a = 1 ;
+  }
+  while ( a == a ) {
+      b = 1 ;
+  }
+}

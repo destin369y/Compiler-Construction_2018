@@ -1,0 +1,25 @@
+This directory contains the source code for the ILOC 
+simulator, as used in COMP 506, Spring 2016 semester.
+
+Makefile:
+
+	make sim    -- builds the simulator
+
+	make clean  -- removes cruft from the directory
+
+	make export -- builds a tar file suitable for 
+                       moving the simulator to a new machine 
+
+Configuring the simulator:
+
+1.  Latencies are set in instruction.c
+2.  Permitted ops are set in instruction.c
+3.  Version numbers are set in sim.h
+4.  Temporary directory is set in sim.h
+5.  Default sizes for memory and registers are set in machine.h
+
+
+
+
+
+

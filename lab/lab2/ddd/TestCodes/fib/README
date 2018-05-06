@@ -1,0 +1,20 @@
+fib
+
+This code computes the first n fibonnaci numbers.
+
+It takes a single paramter: n.
+
+It limits n to the range 1 to 47.  (At 48, the ILOC
+simulator will produce integer overflows and the results
+will begin to alternate between negative and positive 
+numbers.)
+
+If the path to the simulator is 'xyz', you can run the code by 
+typing
+
+   xzy  fib.i
+
+The simulator will prompt you for a number, which the program
+will use and the number of fibonnaci numbers to compute.  If 
+you insist on trying input numbers greater than 48, it will 
+write a zero and quit.

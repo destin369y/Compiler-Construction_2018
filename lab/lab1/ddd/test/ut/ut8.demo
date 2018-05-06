@@ -1,0 +1,21 @@
+procedure main {
+  int x, y, z;
+  int yes, no;
+
+  x = 1;
+  y = 2;
+  z = 3;
+
+  yes = 1;
+  no  = 0;
+
+  if (x < y) then write yes; else write no;
+
+  if (y > z) then write yes;
+  if (y <= z) then write no;
+
+  if (y < z) then
+     if (x == 0) then write yes;
+                else write no;
+
+}

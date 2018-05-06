@@ -1,0 +1,32 @@
+// test of the if-then and if-then-else logic
+procedure main {
+  int one, two, three;
+
+  one = 1;
+  two = 2;
+  three = 3;
+
+  if (one == one) 
+     then write one;
+
+  if (one == two) 
+     then write two;
+     else write one;
+
+  if (one + one == two)
+     then write one;
+     else write two;
+
+  if (one < two) 
+     then if (one == 0)
+             then write one;
+             else write two;
+     else write three;
+
+  if (two < one) 
+     then if (one == 0)
+             then write one;
+             else write two;
+     else write three;
+
+}

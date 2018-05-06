@@ -1,0 +1,22 @@
+algred
+
+This benchmark implements a small, simple calculation intended
+to create opportunities for loop unrolling.
+
+It takes as input a single integer. It then computes some 
+algebraic summation as a function of that integer.  The computation
+takes cubic time (O(n^3)) in the size of that integer.
+
+To check correctness, if you give it the input 10, it should
+produce as output the number 11010.
+
+To run it, if xyz is the path to the ILOC simulator, you would type
+
+   xyz  algred.i
+
+The simulator should respond with a prompt:
+
+  Enter number:
+
+You enter a number and the code runs.
+

@@ -1,0 +1,9 @@
+procedure divide {
+   int a, b, c;
+
+   a = 2;
+   b = a / 2;
+
+   write a;
+   write b;
+}

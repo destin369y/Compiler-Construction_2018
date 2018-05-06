@@ -1,0 +1,12 @@
+procedure main {
+  int a;
+  int b; 
+  int c;
+  int d;
+  a = 1;
+  b = 2;
+  c = a + b; 
+  d = a * c;
+  a = a - 1;
+  b = b / c;
+}

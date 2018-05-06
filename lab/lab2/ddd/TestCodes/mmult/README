@@ -1,0 +1,30 @@
+mmult
+
+This benchmark implements a matrix-matrix multiply.
+
+It takes as input a dimension for the (square) input matrices.
+The dimension must be no larger than 100.
+
+The code generates two identity matrices and multiplies them.
+
+It prints out a single number, indicating whether or not
+the matrix-matrix multiple produced the expected answer.
+
+If it prints a zero, then the computation produced the correct answer.
+If it prints a one, then the computation produced an incorrect answer. 
+
+  mmult.i  -- the code
+
+If 'xyz' is the path to the simulator, then you can run the code
+by typing
+
+  xyz mmult.i
+
+You should see a prompt
+
+  Enter number: 
+
+Enter a number between 1 and 100 and hit carriage return.
+
+
+

@@ -1,0 +1,17 @@
+procedure fred {
+  int a, b, c, yes, no;
+
+  a = 1;
+  b = 2; 
+  c = 3;
+ 
+  yes = 1;
+  no  = 0;
+
+  if (a <= b) then 
+     write yes;
+
+  else 
+    write no;
+
+}

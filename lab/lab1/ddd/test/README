@@ -1,0 +1,9 @@
+In this directory:
+
+1.  Any file whose name ends in ".demo" is a demo source program.
+
+2.  The "errors" subdirectory contains some programs with deliberate
+    syntax errors
+
+3.  The "ut" subdirectory contains some short programs that test
+    specific langauge features.

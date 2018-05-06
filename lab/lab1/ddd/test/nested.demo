@@ -1,0 +1,17 @@
+procedure main {
+  int i, j, k, even, accum;
+
+  accum = 0;
+  even  = 2;
+
+  for i = 1 to 100 by 1 {
+      for j = 1 to 100 by 1 {
+          for k = 1 to 13 by 1 {
+	    if (even == 2) then accum = accum + 1;
+	    if (even == 2) then even = 0;
+            even = even + 1;
+          }
+      }
+  }
+  write accum;
+}
